@@ -1,0 +1,14 @@
+- id: pylint
+  language: python
+  name: pylint
+  entry: pylint
+  types: [python]
+  require_serial: true
+  args:
+    [
+      "-rn",
+      "-sn",
+      "--load-plugins=pylint.extensions.docparams",
+      "--unsafe-load-any-extension=y",
+    ]
+  additional_dependencies: [pylint=="2.8.2"]
